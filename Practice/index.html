@@ -7,6 +7,181 @@
   <title>Document</title>
 </head>
 <body>
+  <h1 style="color:darkcyan">Paragraphs</h1>
   <p>Text in a paragraph tag.</p>
+  <h1 style="color:darkcyan">Headlines</h1>
+  <h1>1st Level Headline</h1>
+  <h2>2nd Level Headline</h2>
+  <h3>3rd Level Headline</h3>
+  <h4>4th Level Headline</h4>
+  <h5>5th Level Headline</h5>
+  <h6>6th Level Headline</h6>
+  <h1 style="color:darkcyan">Bold and Italics</h1>
+  <h2> Choosing between em and i, and strong and bold is helpful for conveying the correct message when someone is using a screen reader.</h2>
+  <h3>Use the em tag to emphasis a word using italics, such as *favorite*. The i tag is more generic. Use the i tag to italicize words such as titles, e.g. Sesame Street:</h3>
+  <p>My <em>favorite</em> character from <i>Sesame Street</i> is Grover.</p>
+  <h3>Use the strong tag to convey importance, seriousness, urgency. Use the bold tag is generic/neutral, just to style as bold. There's no implication of an alternative voice or mood:</h3>
+<h1><strong>WARNING!</strong> Do not be late.</h1>
+<h2><strong>CHOCOLATE AND COFFEE</strong> and other things I crave</h2>
+<p>This is a paragraph of text. Let's pretend it's part of a long article, where we expect many people to quickly scan through it, and <b>we want to mark certain parts with some boldness, </b>some visual attention, so people don't miss them. Almost like having a pull-quote.</p>
+
+<h1 style="color:darkcyan">Lists</h1>
+<h2>Three Types of lists</h2>
+<ul>
+  <li>Unordered Lists</li>
+  <li>Ordered Lists</li>
+  <li>Defintion Lists</li>
+</ul>
+
+<h2>Unordered List of Recipe Ingredients</h2>
+<ul>
+  <li>flour</li>
+  <li>sugar</li>
+  <li>baking powder</li>
+  <li>salt</li>
+  <li>milk</li>
+  <li>apple cider vinegar</li>
+  <li>vanilla</li>
+</ul>
+
+<h2>Ordered List of Foods</h2>
+<ol>
+  <li>In a bowl, mix all the dry ingrediens.</li>
+  <li>In another bowl, mix the rest.</li>
+  <li>Whisk together.</li>
+  <li>Wait 5 minutes.</li>
+  <li>Cook the pancakes.</li>
+</ol>
+
+<h2>Definition List/Description List</h2>
+<h3>Wrap the list in a dl (definition list). The term is wrapped in a dt (defintion term). The definition/value/description is wrapped in a dd (definition description). You can have more than one dd for each dt.</h3>
+<dl>
+  <dt>term 1</dt>
+    <dd>definition 1</dd>
+    <dd>definition 2</dd>
+    <dt>term 2</dt>
+    <dd>definition 1</dd>
+    <dd>definition 2</dd>
+</dl>
+
 </body>
 </html>
+
+<h1 style="color:darkcyan">Quotes</h1>
+
+<h2>Block Quotes</h2>
+<blockquote>
+  <p>We've gone from having 21 elements in HTML tags, that first document, to having 100 more elements now, and yet it's still the same language. I find that amazing. It's still the same language that was created 25 years ago. It's grown an extra 100 elements in there, and yet it's still the same language.</p>
+<cite>- Jeremy Keith</cite>
+</blockquote>
+
+<h2>Quotes in Text</h2>
+<h3>Instead of typing the quote marks manually, we can use the q tag for quote.</h3>
+<p>Jeremy Keith said, <q>You could open an HTML document grom back then in a browser today.</q></p>
+
+
+<h1 style="color:darkcyan">Inline Elements</h1>
+<h2> Inline elements are meant for wrapping around phrases of content that are inline with some other content.</h2>
+<h3>Examples of Inline elements:</h3>
+<ul>
+  <li>q (quote)</li>
+  <li>strong</li>
+  <li>b (bold)</li>
+  <li>i (italic)</li>
+  <li>em (emphasis)</li>
+  <li>code</li>
+</ul>
+
+<h1 style="color:darkcyan">Block-Level Elements</h1>
+<h2>These elements each start a new block. They're a thing on the page. A block that can be followed by another block.</h2>
+<h3>Examples of Block-Level Elements</h3>
+<ul>
+  <li>blockquote</li>
+  <li>p (paragraph)</li>
+  <li>ul (unordered lists)</li>
+  
+</ul>
+
+<h1 style="color:darkcyan">Dates and Times</h1>
+<h2>For date and time, we need to use the time tag along with the HTML attribute datetime</h2>
+<h3>Date Format: YYYY-MM-DD</h3>
+
+<time datetime="2022-11-22">November 22, 2022</time><br>
+<time datetime="2022-11-22">November 22</time><br>
+<time datetime="2022-11-22"> 22 November 2022</time><br>
+<time datetime="2022-11-23">Tomorrow</time><br>
+<time datetime="2022-11-20">2 days ago</time>
+
+<h3>Time Format: hh-mm-ss.ddd</h3>
+<time datetime="14:15:25.5">14:15:25.5</time>
+<h2>Timezone Format: hh-mm-ss.ddd+-hh:mm</h2>
+<time datetime="15:45-05:00">3:45pm in New York</time>
+
+<h2>Date AND Time</h2>
+<time datetime="2020-11-04T19:00">Wednesday, Nov 4th at 7p</time><br>
+<time datetime="2020-11-04 19:00">Wednesday, Nov 4th at 7p</time>
+
+
+<h1 style="color:darkcyan">Code, pre, and br</h1>
+<h1>Code</h1>
+<h2>Sometimes you want to write code in a webpage. For examole, you might be writing an article about making a webpage, or writing a tutorial.</h2>
+<p>
+  We can write <code>{color:green;}</code> in our CSS, and it will apply to anything marked up with an <code>&lt;H4&gt;</code> element.
+</p>
+<h3>To type HTML code on a webpage, inside the code element, type (using the & symbol) ampersandLT; to get < and type ampersandGT; to get ></and></h3>
+
+<h1>&lt;br&gt; and &lt;pre&gt;</h1>
+<h2>&lt;br&gt;: Line Break</h2>
+<p>
+  They <br>
+  say you took my manhood, <br>
+  Momma.<br>
+  Come sit on my lap<br>
+  and tell me,<br>
+  what do you want me to say<br>
+  to them, just<br>
+  before I annihilate<br>
+  their ignorance?<br>
+</p>
+<cite>-Maya Angelou</cite>
+
+<h2>&lt;pre&gt;: Pre tags</h2>
+<h1>[in Just-]</h1>
+<p>by e.e. cummings</p>
+<pre>
+it's 
+spring 
+and 
+      the 
+              goat-footed 
+balloonMan      whistles 
+far 
+and 
+wee
+</pre>
+
+<h2>Pre and Code are often combined to show a block of code with indentation</h2>
+<pre>
+  <code>
+    &lt;ul&gt;
+      &lt;li&gt;flour&lt;/li&gt;
+      &lt;li&gt;sugar&lt;/li&gt;
+      &lt;li&gt;salt&lt;/li&gt;
+    &lt;/ul&gt;
+
+    ul {
+      color: teal;
+    }
+    li{
+      list-style-type: square
+    }
+  </code>
+</pre>
+
+<h1 style="color:darkcyan">Superscripts, Subscripts, and Small Text</h1>
+<h2>Superscripts: Characters that are set above the normal text baseline - markup: &lt;sup&gt;</h2>
+<p>Something that has a footnote.<sup>2</sup></p>
+<h2>Subscripts: Characters that are set below the normal text baseline - markup: &lt;sub&gt;</h2>
+<p>H<sub>2</sub>O</p>
+<h2>Small Text/Fine Print: To convey something that has very little prominence - markup: &lt;small&gt;</h2>
+<small>copyright 2019 Fancy Company </small>
