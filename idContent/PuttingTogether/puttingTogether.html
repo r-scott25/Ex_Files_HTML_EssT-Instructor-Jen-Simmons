@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="font-size: 20px">
+  <h1 style="color: darkcyan">Putting It All Together</h1>
+  <h1 style="color: darkcyan">The HTML Page</h1>
+  <h3>No matter how the website is engineered, the web itself works the same every time.</h3>
+  <ol>
+    <li>URL: A user goes to a URL</li>
+    <li>Request: Hitting that URL sends a request for an HTML file</li>
+    <li>Response: HTML: A server returns a single HTML file</li>
+    <li>The browser reads the HTML file and does what it says</li>
+  </ol>
+  <p><b>HTML file: </b> The first file that's returned in response to a request for a webpage </p>
+  <p>When the browser gets that HTML file, it immediately starts reading it from top to bottom and starts to do what it says.</p>
+  <p>
+    At the top, there's a list of other files (links, scripts). The browser immediately requests them, and once it has those files, <br>
+    it starts to do the things that those files tell it to do.
+  </p>
+  <h2>Key Parts that Every Web Page Must Have</h2>
+  <dl>
+    <dt><b>1. the doctype Declaration</b></dt>
+      <dd>Declares which era this HTML file is from</dd>
+      <dd>&lt;!DOCTYPE html&gt;</dd>
+      <dt><b>2. html Element</b></dt>
+      <dd>Wrap everything else in the webpage inside the &lt;html&gt;&lt;/html&gt; element</dd>
+      <dd>Place the lang Element and dir Element inside the opening tag of the html element</dd>
+      <dd>Example: &lt;html lang="en-US dir="ltr"&gt;&lt;/html&gt;</dd>
+      <dt><b>3. head Element</b></dt>
+      <dd>Located inside the html element, at the top</dd>
+      <dd>The head is for all the meta data, all the information the browser needs to know, although it won't be displayed</dd>
+      <dt><b>4. body Element</b></dt>
+      <dd>Located inside the html element, after the head</dd>
+      <dd>The body contains all the information and content that will be displayed on the page.</dd>
+
+      
+    
+  </dl>
+</body>
+</html>
