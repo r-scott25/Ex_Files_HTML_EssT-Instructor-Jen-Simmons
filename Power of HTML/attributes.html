@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="color:darkcyan">HTML Attributes</h1>
+  <h2>Some attributes only work on certain elements - for example, the datetime attribute only works on the time element.</h2>
+  <h2>Other attributes work on several of the elements, but not all of them.</h2>
+  <h1 style="color:darkcyan">Global Attributes</h1>
+  <h2> Global attributes can be applied to any HTML element</h2>
+  <h3 style="color:lightcoral">The 4 Most Useful Attributes</h3>
+  <dl>
+    <dt><b>The class Attribute</b></dt>
+      <dd>Allows us to target <strong>all elements with that class</strong> in our CSS or JavaScript</b></dd>
+      <dd>&lt;p class="intro"&gt;This is the introduction&lt;p&gt;</dd>
+    <dt><b>The id Attribute</b></dt>
+      <dd>Allows us to target <strong>a unique element with that id</strong> in our CSS or JavaScript</b></dd>
+      <dd>&lt;p class="intro" id="article-intro"&gt;This is the introduction&lt;p&gt;</dd>
+      <dt><b>The lang Attribute</b></dt>
+      <dd>The Lang Attribute gives us a way to tell the browser what language the content is in. Markup: lang="language-code</dd>
+      <dd>&lt;p lang="en-GB">This paragraph is in British English.&lt;/p&gt;</dd>
+      <dd>&lt;p lang="fr">Ce paragraphe defini en francais.&lt;/p&gt;</dd>
+      <dt><b>The dir Attribute</b></dt>
+      <dd>The DIR attribute tells the browser in which direction the text flows.</dd>
+      <dd>&lt;p dir="ltr">This paragraph is in English. It flows from left to right.&lt;/p&gt;</dd>
+      <dd>&lt;p dir="rtl">Other languages flow from right to left.&lt;/p&gt;</dd>
+  </dl>
+  
+  <h2>The contenteditable="true" attribute lets visitors edit the content of that page.</h2>
+  <cite contenteditable="true">Your name here</cite>
+ 
+  <h1 style="color:darkcyan">ARIA Roles</h1>
+  <h2>ARIA roles are another kind of attribute that can be added to any HTML element to give it more meaning and to make sure the browser understands what something is.</h2>
+  <h3>Ideally, we won't need an ARIA role. If we use the proper HTML element, we'll communicate the right message about the semantics of the content.</h3>
+  <h2> ARIA Roles: HTML attributes that provide accessible information about that specific element</h2>
+  <h3>The layer of information conveyed by ARIA tells screen readers, braille displays, magnifiers, and other assistive technology things they need to know to make a site fully accessible.</h3>
+  <h2>Example</h2>
+  <h1 aria-label="Hello World">
+    <div class="grid" aria-hidden="true">
+      <span>H</span>
+      <span>E</span>
+      <span>L</span>
+      <span>L</span>
+      <span>O</span>
+
+      <span>W</span>
+      <span>O</span>
+      <span>R</span>
+      <span>L</span>
+      <span>D</span>
+    </div>
+  </h1>
+</body>
+</html>
+
+<h1 style="color:darkcyan">Formatting HTML</h1>
+<ul>
+  <li>
+    <p>For the most part, HTML doesn't care about spaces, tabs, new lines. Exceptions: pre element, code element, textarea element, or if you use <br>
+    CSS to change how the whitespace is handled - in those cases extra spaces, returns and indentations can count. But, most of the time, <br>
+    the browser will ignore everything having to do with spacing beyond the presence of a single space. </p>
+  </li>
+  <li>
+    <p>Adding comments to code can make it easier to understand what the code is doing.</p>
+    <p>&lt;!-- <b>Comments start with a < sign followed by !--, they end with --></b> --&gt;</p>
+    <!-- Adding comments to code can make it easier to understand what the code is doing. -->
+  </li>
+  <li>
+    <p>When HTML was first created, uppercase letters were used to denote tags. Now we use lowercase. <br>
+    But, it doesn't actually matter for browser readibility. But, everyone uses lowercase now.</p>
+  </li>
+  <li>
+    <p>Some elements have an short abbreviation, like p or i. Others, like article and video are full words. <br>
+      Why? HTML was invented in the early 80s/90s, when computer scientists needed to save memory space, <br>
+      so they only used initial abbreviations of words. Now, with the newer elements that have been added, <br>
+      we have more memory storage capability, so we can use full words to make code easily readble and understandable.</p>
+  </li>
+  <li>
+    <p>Do we have a closing tag or not? The newer HTML elements always have an opening and a closing tag. <br>
+      Sometimes you don't put anything between an opening and closing tag. But, for some older elements, <br>
+      there is no closing tag, like image. People used to think that if it didn't need a closing tag, why have one? <br>
+      Later, best practice said to put a slash at the end of a tag that doesn't have a closing tag. <br>
+      The ideas is that the element kind of opens and closes itself, all at once. <br>
+      Now, it really doesn't matter if you have the closing slash or not.</p>
+  </li>
+ 
+</ul>
