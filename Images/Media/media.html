@@ -92,5 +92,44 @@
             video hosting service</b>.</p>
 
     
+
+    <h1 style="color: darkcyan">Captions and Subtitles</h1>
+    <p>Use captions and subtitles to make the video content more accessible to everyone, and in many places are required by law.</p>
+    <p>Do this by using the <b>track element</b>.</p>
+    <p>The video player will provide all the functionality so a viewer can turn captioning on and off or switch from one set of subtitles to another.</p>
+    <h3>webvtt = web video text tracks</h3>
+    <p>webvtt is basically a plain text file with a vtt extension that uses a certain convention for providing the information.</p>
+    <p>To get these captions to show up on our video we put the track element inside the video element. Just like the source elements, it's part of <br>
+      the list of options for the browser to use while rendering the video player. On the track element, we'll use the <b>source attribute</b> to point to <br>
+      the file itself. We'll use the <b>kind</b> attribute to tell the browser that this is captions. We'll add a <b>label</b> of english that will show up in <br>
+      the player as a label for this choice. We'll use a <b>srclang attribute</b> to specify which language this is. And we'll put a <b>default attribute</b> on <br>
+      this track element to specify that this track is the one we want to use by default when a user turns on captions.Now, I'll add a translation <br>
+      into Spanish and offer some options for subtitles. I've got another vtt file this time in Spanish. And we'll add another track element inside <br>
+      the same video element. This time, we'll set kind to subtitles.</p>
+    <video controls>
+      <source src="moonwalk.ogg"
+              type="audio/ogg codec=opus">
+      <source src="moonwalk.mp3"
+              type="audio/mpeg">
+      <track src="moonwalk.vtt" 
+              kind="captions"
+              label="English"
+              srclang="en"
+              default>
+              <track src="moonwalk.vtt" 
+              kind="subtitles"
+              label="Espanol"
+              srclang="es"
+              default>
+              <p>This would be a video of a moonwalk, if your device supported playing the video.</p>
+  </video>
+
+  <p>There are other options for the <b>kind attribute</b>.</p>
+  <p> We could create a vtt file that has descriptive information about what's happening <br>
+    visually in the video, and use <b>kind="descriptions"</b>.</p>
+    <p><b>Kind="chapters"</b> gives us a way to provide a text file that lists the chapters in the video, giving users a way to jump from one <br>
+      section in the video to another.</p>
+
+      <h1 style="color: darkcyan">Embedding other media through iframes</h1>
   </body>
 </html>
