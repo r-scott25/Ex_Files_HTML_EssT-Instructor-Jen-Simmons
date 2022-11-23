@@ -130,6 +130,36 @@
     <p><b>Kind="chapters"</b> gives us a way to provide a text file that lists the chapters in the video, giving users a way to jump from one <br>
       section in the video to another.</p>
 
-      <h1 style="color: darkcyan">Embedding other media through iframes</h1>
+  <h1 style="color: darkcyan">Embedding other media through iframes</h1>
+  <p>For videos, it is likely that you'll use a video hosing service and embed the video player that they provide onto your webpage.</p>
+  <p><b>Embedding: </b>Taking content from one site and placing it into the middle of a page on another site.</p>
+  <p>There are lots of things you can embed. For example, a map from Google, a code demo from CodePen, a slide deck from Speaker Deck.</p>
+  <p>It's common to embed something complex from a service that takes care of all the hard parts for you.</p>
+  <h3>What HTML do we need to know to help us do this? </h3>
+  <p>
+    Well, basically, you get the HTML from the service that you are using. Let's use YouTube as an example. Here is a YouTube video that I made. <br>
+    And let's say I want to post it on my own website, so people can find it on my domain name and not have to go to the YouTube website. <br>
+    I'll look for a share button, or some other clue about where I can find the embed code. Here it is. Share. I see where it says Embed, and let me <br>
+    click that. And I see some options, Privacy Enhanced, that sounds good. I'll click Copy, and I'll get some code copied to my clipboard. <br>
+    I'll past this into my HTML, and voila, now I have a video embedded on the page. We don't really need to understand what all of this says. <br>
+    The engineers at YouTube wrote it all for us. Although, now that we know how to read HTML, we can see a lot here that we recognize. <br>
+    The <b>iframe element</b> has several attributes on it, including height and width. We could adjust those. Src is going to point to the source <br>
+    of the video file. Iframes are powerful. 
+  </p>
+    <h3>There are definitely some security considerations to be had about pulling in code from other sites like this.</h3>
+
+  <p>
+    So if you're using a CMS that someone else set up, like it's your job to post content on a WordPress website, or a Drupal website, there's a <br>
+    good chance that you can't just paste some random embed code from another website into your system. There's a good chance that the CMS is set up <br>
+    with a different way to allow a URL or a shortcode from a specifically white-labeled source. And you'll want to talk to someone who knows how to <br>
+    use your CMS to find out how to embed things like YouTube videos. If you're the person building a site, you probably want to think about how <br>
+    security will work when it comes to the iframe element. If a bunch of different people are going to be entering content into a system, you're <br>
+    not going to want to just allow all iframes. Think about the security. If it's just you, posting your own videos on your own website, then it <br>
+    will be fine.
+  </p>
+
+
+
+
   </body>
 </html>
