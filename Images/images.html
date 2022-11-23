@@ -102,6 +102,42 @@
     Aim to make them download as fast as possible.
     </h3>
 
+    <h1 style="color:darkcyan">Responsive Images</h1>
+    <p>Sometimes, we want to display a big, beautiful, high resolution image for people with big screens and then, <br>
+      shrink it way down for people on phones, on small screens. CSS can do this. One image file can be shown at any size. <br>
+      But there's a problem. A big, high resolution image contains millions of pixels. And all that data can make the file size pretty big. <br>
+      Which takes a lot of time to download on a slow network connection and can use up people's data plans and in some markets, <br>
+      cost them a lot of money.</p>
+      <p>We don't want to deliver unneeded, high resolution data to small screens.</p>
+      <p>We don't want to deliver images that are physically smaller, have less color data, fewer pixels, and that are more compressed. <br>
+        People with big desktop monitors will get a low quality photo blown up really big.</p>
+      <h3>We can use the power of HTML to deliver different image files to different size screens.</h3>
+     
+      <p>We can make several different files and list them as a set of options in our HTML and let the browser decide which image to download.</p>
+      <p>It can do so in coordination with the operating system while taking the device hardware capabilities and network speed inot account as well.</p>
+      <p>
+        More and more screens these days are not 1X screens. The retina screens, high density, DPI, super retina, etc. screens. <br>
+        There are a bunch of scrrens with a pixel density that is 2X, 3X, 4X, where more data can be displayed by the screen.
+      </p>  
+      <p>
+          The simplest way to support different screens is to create multiple copies of our image in different resolutions and then tell the browser <br>
+          that those copies are available. The device can then decide what it wants to do. The browser will look at the screen density, <br>
+          the network connection, the users settings and decide which image to use. Even is someone has a high resolution screen, <br>
+          the browser might decide to download a lower resolution image.
+        </p>
+        <p>
+          I've created four copies of this photo at 480, and 960, 1440 and 1920 pixels wide. <br>
+          Let me duplicate this basic HTML for displaying an image. So we can change the second one and compare the results. <br>
+          We're going to still write the code for displaying the image in a normal way. This is good for older browsers. <br>
+          We need the source attribute and we'll put our 1X version of the image here. We need the alt text just like before and the width and <br>
+          the height. It will definitely still improve in performance, keep that. It's OK that the pixel numbers won't always be accurate. <br>
+          The aspect ratio is what's important here. And 480 by 360 calculates to a four by three aspect ratio. All of these photos are <br>
+          four by three. Now, let's add a source set attribute. Inside of it, we'll list the images that we are offering the browser as choices. <br>
+          It's a comma separated list. With a URL to a file, a space, the resolution, like 2X, 3X, 4X, 1.5X, whatever, a comma, and the next one. <br>
+          Now, the browser will swap out one version of this image for another based on what it thinks is best. This is a great solution for <br>
+          providing different size images to handle retina and high DPI screens. 
+        </p>
+    
 
 
 
