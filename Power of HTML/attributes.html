@@ -89,3 +89,36 @@
   </li>
  
 </ul>
+
+<h1 style="color:darkcyan">Weird Characters</h1>
+<h3>The > sign, the < sign, and the & are part of the characters that we use to write HTML. So, what happens when we want to use them in our content?</h3>
+<p>When you write the > or < or & signs with spaces around them, they will show up as content. <br>
+  But, if you start to write something that might look like an html element, it disappears. <br>
+  The browser thinks it should do this as part of html instead of displaying it.</p>
+  <h3>You can handle this using an HTML Entity</h3>
+  <h3>HTML Entity Format: Ampersand, short code, semicolon (no spaces between them)</h3>
+  <dl>
+    <dt>Entity:  & lt; (but with no spaces <!-- &lt;-->)</dt>
+    <dd>Character:   < </dd>
+    <dt>Entity: & gt; (but with no spaces <!-- &gt;-->)</dt>
+    <dd>Character: > </dd>
+    <dt>Entity:  & amp; (but with no spaces <!-- &amp;-->)</dt>
+    <dd>Character: & </dd>
+  </dl>
+  <h3>HTML Entities can also be helpful for typing characters that aren't on your keyboard</h3>
+  <h4>Copyright: &copy;</h4>
+  <h4>Trademark: &trade;</h4>
+  <h4>Star: &star;</h4>
+  <h3>You don't have to use the character entity. You can just copy and paste the character or learn the keyboard command for it.</h3>
+  <h3>Non-Breaking Space Entity</h3>
+  <h4>Normally, spaces provide opportunities for lines of text to wrap. The words stay whole, and when there's not enough room, <br>
+    the browswer looks for a place to wrap the line of text. It looks for any space where there's a space between words.<br>
+    But, we can insert a non-breaking space between two words, instead of a regular space, and the browser will know NOT to break the line there:</h4>
+    <p>Find out more on LinkedIn&nbsp;Learning.</p>
+    <h4>Example: Your name is in a phrase and you want to never have your last name separated onto a new line from your first name. <br>
+      You can type & nbsp; (but no space between & n)for non breaking space.</h4>
+      <p>Here is a sentence that will break between every word, including between Rachel&nbsp;Scott.</p>
+      <h4> You can also use the non-breaking space entity to force the browser to put more than one space between words.</h4>
+      <p>Here's an example.&nbsp;&nbsp; Some people put multiple spaces between every sentence. &nbsp;&nbsp; Like and animal&nbsp;&nbsp; Why?&nbsp;&nbsp; I don't know.&nbsp;&nbsp; The computer is not a typewriter.</p>
+  
+  
