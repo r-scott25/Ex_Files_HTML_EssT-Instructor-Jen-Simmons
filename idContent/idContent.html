@@ -44,5 +44,25 @@
               <p><b>&lt;meta charset="UTF-8&gt;</b></p>
               <p>Include this <b>meta element</b> on every page in our site, inside the <b>head element</b>.</p>
 
+<h1 style="color: darkcyan">Generic Elements: div and span</h1>
+
+<p><b>&lt;div&gt;</b></p>
+<p><b>&lt;span&gt;</b></p>
+<p><b>DON'T use these for everything. IT'S BAD. It hurts a lot of users.</b></p>
+<p>But, sometimes we need a generic element - a div or a span</p>
+<p>A <b>div</b> is a block level element.</p>
+<p>A <b>span</b> is an inline element.</p>
+<p>They both do the same thing: Nothing. Until you point CSS or JavaScript at them.</p>
+<p>div and span can take all the Global Attributes: class, id, lang, and aria roles.</p>
+<h2>Use Case for div and span:</h2>
+<p>We've got a simple article wrapped in an article element. There's a headline and four paragraphs. Perhaps we're writing the CSS for layout and <br>
+  we realize we need to put these paragraphs in a group together, so that we can put a background color behind just the paragraphs and not behind <br>
+  anything else. So let's add a div with a class of box. I wrote some CSS that targets this box class and you can see it kick in. Let's say we have <br>
+  some reason to target a phrase of content in the middle of the text. Some of this content is in Spanish and we want to make sure to change the <br>
+  lang attribute for it since it's the sentence in the middle of a paragraph let's use the inline element span to mark the phrase that we want to <br>
+  change.</p>
+
+  <h3>Only use div and span when there's not another element that will work - as a last resort.</h3>
+
 </body>
 </html>
