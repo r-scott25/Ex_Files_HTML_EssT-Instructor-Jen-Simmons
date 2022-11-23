@@ -148,7 +148,32 @@
 </p>
 <p><b>The srcset Attribute</b></p>
 <p>The srsset attribute allowys you to specify multiple files to be used based on either viewport width or image pixel width.</p>
-    
+
+<h1 style="color:darkcyan">Responsive Pictures</h1>
+<p>
+  What if we want to use a different image on mobile than on desktop? <br>
+  Maybe we want the image to be tall and narrow on mobile, where it's short and wide on desktop. <br>
+  Maybe we want to use the full picture on desktop, but a cropped image on mobile.<br>
+  Or even use a completely different photo altogether. 
+</p>
+<p>The image element alone, even with the srcset or size attributes can't do this.For this, we need the picture element</p>
+<h3>Picture Element</h3>
+<p>Wrap the image element with a picture element. With the picture wrapping the image element, we can list alternative options through the sources element. If you want to provide two options, create two source elements.</p>
+<picture>
+  <source media="(min-width:600px)" srcset="">
+  <source srcset="">
+  <img src="https://images.pexels.com/photos/14518598/pexels-photo-14518598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+  alt="Drinking cocoa outside a cabin" 
+  width="400"
+  height="500">
+</picture>
+
+<p>That's a lot of files to create and a lot of math involved.</p>
+<p>
+  On most sites, though, the work needed to publish each image in this way is automated. <br>
+  A person who adds content to the site just uploads one large image. And then magical robots on the server do all the work of creating <br>
+  the image files and writing out all the code. Those magical robots do need to be told what to do.
+</p>
 
 
 
