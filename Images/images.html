@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1 style="color:darkcyan">Images</h1>
+  <h2> Image Tag/Element: &lt;img&gt;</h2>
+  <!-- <img> -->
+  <h2>Four Attributes of an Image Element</h2>
+  <dl>
+    <dt><b>1. Source Attribute: src="img.jpg"</b></dt>
+    <dd>
+      The source attribute tells the browser which image file to load.
+    </dd>
+    
+    <dt><b>2. Alternative Attribute: alt="black dog"</b></dt>
+    <dd>
+      The alt attribute acts as a substitute for the image whenever the image can't be seen. <br>
+      For example, people who are blind may use a screen reader where the ALT text is read aloud to them.
+    </dd>
+    <dd>
+      Some images don't need an explanation. Like a logo. In these cases, include the alt tag, but leave it empty. <br>
+      If not, the file name for the image might get read aloud. 
+    </dd>
+    <dt><b>3. Width Attribue: width="400"</b></dt>
+    <dd>Let the browser know how wide the image is in pixels. We don't include the unit px. It's understood to mean pixels.</dd>
+    <dt><b>4. Height Attribute: height="300"</b></dt>
+    <dd>Let the browser know how tall the image is in pixels. We don't include the unit px. It's understood to mean pixels.</dd>
+    <dt><b>Why include the width and height if the image appears the size we want it to? </b></dt>
+    <dd>
+      Once the file is already loaded and on the page, the width and height attributes don't do anything.<br>
+      The browser figured out how big to display the image by downloading it, looking at the file and its characteristics, <br>
+      and using that to calculate the layout. The problem is, if the browser has to get the size information out of the file, <br>
+      then it can't calculate this part of the layout until after the image has downloaded. If instead we tell the browser how big each image is,<br>
+      then it knows immediately and that gives the browser a split second head start in calculating the layout.<br>
+      Including the width and height attributes will prevent a webpage from jumping around as images load, moving everything as you're trying to read.
+    </dd>
+    <dt><b>Image Element with all 4 Attributes:</b></dt>
+    <dd>
+      <img src="https://images.pexels.com/photos/14518598/pexels-photo-14518598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            alt="Drinking cocoa outside a cabin" 
+            width="400"
+            height="500">
+    </dd>
+  </dl>
+</body>
+</html>
