@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="font-size:20px">
+  <h1 style="color:darkcyan">Images</h1>
+  <h2> Image Tag/Element: &lt;img&gt;</h2>
+  <!-- <img> -->
+  <h2>Four Attributes of an Image Element</h2>
+  <dl >
+    <dt><b>1. Source Attribute: src="img.jpg"</b></dt>
+    <dd>
+      The source attribute tells the browser which image file to load.
+    </dd>
+    
+    <dt><b>2. Alternative Attribute: alt="black dog"</b></dt>
+    <dd>
+      The alt attribute acts as a substitute for the image whenever the image can't be seen. <br>
+      For example, people who are blind may use a screen reader where the ALT text is read aloud to them.
+    </dd>
+    <dd>
+      Some images don't need an explanation. Like a logo. In these cases, include the alt tag, but leave it empty. <br>
+      If not, the file name for the image might get read aloud. 
+    </dd>
+    <dt><b>3. Width Attribue: width="400"</b></dt>
+    <dd>Let the browser know how wide the image is in pixels. We don't include the unit px. It's understood to mean pixels.</dd>
+    <dt><b>4. Height Attribute: height="300"</b></dt>
+    <dd>Let the browser know how tall the image is in pixels. We don't include the unit px. It's understood to mean pixels.</dd>
+    <dt><b>Why include the width and height if the image appears the size we want it to? </b></dt>
+    <dd>
+      Once the file is already loaded and on the page, the width and height attributes don't do anything.<br>
+      The browser figured out how big to display the image by downloading it, looking at the file and its characteristics, <br>
+      and using that to calculate the layout. The problem is, if the browser has to get the size information out of the file, <br>
+      then it can't calculate this part of the layout until after the image has downloaded. If instead we tell the browser how big each image is,<br>
+      then it knows immediately and that gives the browser a split second head start in calculating the layout.<br>
+      Including the width and height attributes will prevent a webpage from jumping around as images load, moving everything as you're trying to read.
+    </dd>
+    <dt><b>Image Element with all 4 Attributes:</b></dt>
+    <dd>
+      <img src="https://images.pexels.com/photos/14518598/pexels-photo-14518598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            alt="Drinking cocoa outside a cabin" 
+            width="400"
+            height="500">
+    </dd>
+  </dl>
+
+
+  <h1 style="color:darkcyan">Image Formats</h1>
+  <p>
+    To put an image on a webpage, it has to be in a file format that web browsers understand. There are several options. <br>
+    We keep inventing new ones in a quest for the perfect balance between tiny file sizes and gorgeous-looking images. <br>
+    We want as much data as possible, so that it'll look amazing. <br>
+    But we want as little data as possible so images will download faster and not eat through people's data plans.
+  </p>
+  <p><b>Goal: High Quality + Small File Size</b></p>
+<p>Each fule format takes a different approach to solving this. <br>
+  Each uses a different technique for compressing the image.</p>
+  <h2>Four Main File Formats</h2>
+  <ol>
+    <li><b>GIF</b></li>
+      <ul>
+        <li>GIF = Graphics Interchange Format</li>
+        <li>The GIF is one of the oldest.</li>
+        <li>Good at compressing illustrations that have large areas of a single color</li>
+        <li>Limited color space of 256 colors (This can make photographs pixelated) - Bad choice for photographs</li>
+        <li>Can do transparency, with jagged edges</li>
+        <li>Can have multiple frames, and make a little movie</li>
+      </ul>
+    <li><b>SVG</b></li>
+    <ul>
+      <li>SVG = Scalable Vector Graphic</li>
+      <li> Great for logos, icons, and other kinds of illustration.</li>
+      <li>Vector file (instead of pixels) - - It contains instructions for a drawing (e.g. Make a square, make it this color, put it here.</li>
+      <li>Because SVGs are made of vector and math, these images can scale to be physically quite large or very small without losing any quality. This makes the file size very small.</li>
+      <li>If you can use an SVG, you definitely should.</li>
+      <li>SVGs can be exported from Illustrator, Sketch, or other vector graphics programs</li>
+    </ul>
+    <li><b>JPG</b></li>
+    <ul>
+      <li>Image format for compressing photos</li>
+      <li>Most digital cameras save photos that you shoot as JPG files.</li>
+      <li>When you put a JPG image on the web, make sure that either a human or robot resizes the image to an appropriate physical size<br>
+         and compresses it for the web. (Don't just stick a 5000 pixel wide, half-compressed JPG on your website. <br>
+         They are far too big for users to download and will make your site very slow.)</li>
+      <li>Can be compressed to much smaller sizes by simplifying the color info in the file.</li>
+      <li>Pick a balance between Size vs. Quality   - - You can do that manually or rely on your web service to handle the task.</li>
+    </ul>
+    <li><b>PNG</b></li>
+    <ul>
+      <li>Good solution when you have a photograph AND you need part of the photo to be transparent.</li>
+      <li>Good at compression illustrastions</li>
+      <li>Good at compressing photos and images</li>
+      <li>Depends on the use case - - - If you're manually compressing files, you should try several options and see which results in the smaller file.</li>
+    </ul>
+  </ol>
+  <h3>
+    Consider the physical size of an image, the file format and teh compressing settings when making your image files.<br>
+    Aim to make them download as fast as possible.
+    </h3>
+
+    <h1 style="color:darkcyan">Responsive Images</h1>
+    <h2>Displaying Images Based on the Resolution of the Screen</h2>
+    <p>Sometimes, we want to display a big, beautiful, high resolution image for people with big screens and then, <br>
+      shrink it way down for people on phones, on small screens. CSS can do this. One image file can be shown at any size. <br>
+      But there's a problem. A big, high resolution image contains millions of pixels. And all that data can make the file size pretty big. <br>
+      Which takes a lot of time to download on a slow network connection and can use up people's data plans and in some markets, <br>
+      cost them a lot of money.</p>
+      <p>We don't want to deliver unneeded, high resolution data to small screens.</p>
+      <p>We don't want to deliver images that are physically smaller, have less color data, fewer pixels, and that are more compressed. <br>
+        People with big desktop monitors will get a low quality photo blown up really big.</p>
+      <h3>We can use the power of HTML to deliver different image files to different size screens.</h3>
+     
+      <p>We can make several different files and list them as a set of options in our HTML and let the browser decide which image to download.</p>
+      <p>It can do so in coordination with the operating system while taking the device hardware capabilities and network speed inot account as well.</p>
+      <p>
+        More and more screens these days are not 1X screens. The retina screens, high density, DPI, super retina, etc. screens. <br>
+        There are a bunch of scrrens with a pixel density that is 2X, 3X, 4X, where more data can be displayed by the screen.
+      </p>  
+      <p>
+          The simplest way to support different screens is to create multiple copies of our image in different resolutions and then tell the browser <br>
+          that those copies are available. The device can then decide what it wants to do. The browser will look at the screen density, <br>
+          the network connection, the users settings and decide which image to use. Even is someone has a high resolution screen, <br>
+          the browser might decide to download a lower resolution image.
+        </p>
+        <p>
+          I've created four copies of this photo at 480, and 960, 1440 and 1920 pixels wide. <br>
+          Let me duplicate this basic HTML for displaying an image. So we can change the second one and compare the results. <br>
+          We're going to still write the code for displaying the image in a normal way. This is good for older browsers. <br>
+          We need the source attribute and we'll put our 1X version of the image here. We need the alt text just like before and the width and <br>
+          the height. It will definitely still improve in performance, keep that. It's OK that the pixel numbers won't always be accurate. <br>
+          The aspect ratio is what's important here. And 480 by 360 calculates to a four by three aspect ratio. All of these photos are <br>
+          four by three. Now, let's add a source set attribute. Inside of it, we'll list the images that we are offering the browser as choices. <br>
+          It's a comma separated list. With a URL to a file, a space, the resolution, like 2X, 3X, 4X, 1.5X, whatever, a comma, and the next one. <br>
+          Now, the browser will swap out one version of this image for another based on what it thinks is best. This is a great solution for <br>
+          providing different size images to handle retina and high DPI screens. 
+        </p>
+
+<h1 style="color:darkcyan">Responsive Width</h1>
+<h2>Displaying Images Based on the Width of the Viewport/Size of the Screen (as well as the density)</h2>
+<p><b>The Size Attribute</b></p>
+<p>
+  Use the size attribute to list which size image to use at which media query. <br>
+  The sizes attribute specifies for the browser how much of the viewport's width that image will take up at which break point
+</p>
+<p><b>The srcset Attribute</b></p>
+<p>The srsset attribute allowys you to specify multiple files to be used based on either viewport width or image pixel width.</p>
+
+<h1 style="color:darkcyan">Responsive Pictures</h1>
+<p>
+  What if we want to use a different image on mobile than on desktop? <br>
+  Maybe we want the image to be tall and narrow on mobile, where it's short and wide on desktop. <br>
+  Maybe we want to use the full picture on desktop, but a cropped image on mobile.<br>
+  Or even use a completely different photo altogether. 
+</p>
+<p>The image element alone, even with the srcset or size attributes can't do this.For this, we need the picture element</p>
+<h3>Picture Element</h3>
+<p>Wrap the image element with a picture element. With the picture wrapping the image element, we can list alternative options through the sources element. If you want to provide two options, create two source elements.</p>
+<picture>
+  <source media="(min-width:600px)" srcset="">
+  <source srcset="">
+  <img src="https://images.pexels.com/photos/14518598/pexels-photo-14518598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+  alt="Drinking cocoa outside a cabin" 
+  width="400"
+  height="500">
+</picture>
+
+<p>That's a lot of files to create and a lot of math involved.</p>
+<p>
+  On most sites, though, the work needed to publish each image in this way is automated. <br>
+  A person who adds content to the site just uploads one large image. And then magical robots on the server do all the work of creating <br>
+  the image files and writing out all the code. Those magical robots do need to be told what to do.
+</p>
+
+
+
+
+
+
+
+</body>
+</html>
