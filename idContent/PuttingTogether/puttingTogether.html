@@ -1,45 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body style="font-size: 20px">
-  <h1 style="color: darkcyan">Putting It All Together</h1>
-  <h1 style="color: darkcyan">The HTML Page</h1>
-  <h3>No matter how the website is engineered, the web itself works the same every time.</h3>
-  <ol>
-    <li>URL: A user goes to a URL</li>
-    <li>Request: Hitting that URL sends a request for an HTML file</li>
-    <li>Response: HTML: A server returns a single HTML file</li>
-    <li>The browser reads the HTML file and does what it says</li>
-  </ol>
-  <p><b>HTML file: </b> The first file that's returned in response to a request for a webpage </p>
-  <p>When the browser gets that HTML file, it immediately starts reading it from top to bottom and starts to do what it says.</p>
-  <p>
-    At the top, there's a list of other files (links, scripts). The browser immediately requests them, and once it has those files, <br>
-    it starts to do the things that those files tell it to do.
-  </p>
-  <h2>Key Parts that Every Web Page Must Have</h2>
-  <dl>
-    <dt><b>1. the doctype Declaration</b></dt>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="font-size: 20px">
+    <h1 style="color: darkcyan">Putting It All Together</h1>
+    <h1 style="color: darkcyan">The HTML Page</h1>
+    <h3>
+      No matter how the website is engineered, the web itself works the same
+      every time.
+    </h3>
+    <ol>
+      <li>URL: A user goes to a URL</li>
+      <li>Request: Hitting that URL sends a request for an HTML file</li>
+      <li>Response: HTML: A server returns a single HTML file</li>
+      <li>The browser reads the HTML file and does what it says</li>
+    </ol>
+    <p>
+      <b>HTML file: </b> The first file that's returned in response to a request
+      for a webpage
+    </p>
+    <p>
+      When the browser gets that HTML file, it immediately starts reading it
+      from top to bottom and starts to do what it says.
+    </p>
+    <p>
+      At the top, there's a list of other files (links, scripts). The browser
+      immediately requests them, and once it has those files, <br />
+      it starts to do the things that those files tell it to do.
+    </p>
+    <h2>Key Parts that Every Web Page Must Have</h2>
+    <dl>
+      <dt><b>1. the doctype Declaration</b></dt>
       <dd>Declares which era this HTML file is from</dd>
       <dd>&lt;!DOCTYPE html&gt;</dd>
       <dt><b>2. html Element</b></dt>
-      <dd>Wrap everything else in the webpage inside the &lt;html&gt;&lt;/html&gt; element</dd>
-      <dd>Place the lang Element and dir Element inside the opening tag of the html element</dd>
+      <dd>
+        Wrap everything else in the webpage inside the &lt;html&gt;&lt;/html&gt;
+        element
+      </dd>
+      <dd>
+        Place the lang Element and dir Element inside the opening tag of the
+        html element
+      </dd>
       <dd>Example: &lt;html lang="en-US dir="ltr"&gt;&lt;/html&gt;</dd>
       <dt><b>3. head Element</b></dt>
       <dd>Located inside the html element, at the top</dd>
-      <dd>The head is for all the meta data, all the information the browser needs to know, although it won't be displayed</dd>
+      <dd>
+        The head is for all the meta data, all the information the browser needs
+        to know, although it won't be displayed
+      </dd>
       <dt><b>4. body Element</b></dt>
       <dd>Located inside the html element, after the head</dd>
-      <dd>The body contains all the information and content that will be displayed on the page.</dd>
-
-      
-    
-  </dl>
-</body>
+      <dd>
+        The body contains all the information and content that will be displayed
+        on the page.
+      </dd>
+    </dl>
+    <h1 style="color: darkcyan">Document head</h1>
+    <p>
+      In the head, don't put information you want your user to see. Put
+      information you want your browser to know.
+    </p>
+    <p>
+      <b>meta Element: </b>Only used inside the head. Conveys metadata about the
+      page.
+    </p>
+    <p>
+      &lt;head&gt;<br />
+      &lt;meta charset="UTF-8"&gt;<br />
+      &lt;title&gt;Title to Appear on the Browser Tab&lt;/title&gt;<br />
+      &lt;/head&gt;<br />
+    </p>
+    <p>
+      <b>title Element</b>This is not a title that gets displayed as content.
+      This is a title for the webpage that's used by the browser. <br />
+      It shows up as the name on a browser tab, or as a bookmark title when
+      someone bookmarks it. The name of the page, if it's listed under top sites
+      <br />
+      when a user opens a new browser. Any place the interface of the browser
+      references this page, it uses the title that's defined in the title <br />
+      element.
+    </p>
+    <p>
+      The <b>meta Element</b> can be used to define all kinds of settings.
+      <br />
+      One incredibly common use is to tell the browser the layout has been
+      morphed to fit small screens, that it is a responsive website. <br />
+      Without this meta tag, the browser assumes the page is using an older
+      technique for layout, that it's a desktop layout that needs to be shrunk
+      <br />
+      down to fit on a phone.
+    </p>
+    <p>
+      We probably also want to add a description of the site. This description
+      will show up in search engine results. The meta tag is used to give <br />
+      the webpage a name when it's saved to home screen, and to specify tile
+      image and a background color.
+    </p>
+    <p>
+      Have you ever posted a link to Slack, LinkedIn, Twitter, or elsewhere and
+      seen that link turn into a great-looking card? That's set up using <br />
+      meta tags. There are many techniques for refining and improving the
+      experience of your site that all involve the meta tag.
+    </p>
+    <p>
+      <b>link Element</b>. This is used to link to a range of other assets that
+      we want to load, like CSS files, fonts, and favicons. <br />
+      The <b>rel attribute</b> is used to tell a browser which kind of asset it
+      is. And the <b>href attribute</b> is used to provide the URL to <br />
+      the asset. The link to a stylesheet looks like this, with the rel
+      attribute of stylesheet. A link to a favicon looks like this. <br />
+      We can also link to preload a font file. <br />
+      One thing to think about, the browser will load the files in the order in
+      which they're listed. Put things you want to load first at the top. <br />
+      Things that aren't as important or that won't get used right away, they
+      can go further down.
+    </p>
+    <p>
+      The last commonly used element that goes into an HTML document's head is
+      the <b>script tag</b>. This tells the browser to load a JavaScript
+      file.<br />
+      Actually, a script tag doesn't have to go into the HTML head. Frequently,
+      people put it at the end of an HTML document so the browser loads <br />
+      JavaScript after everything else has loaded. But sometimes it is included
+      in the head.
+    </p>
+    <p>
+      The HTML head is a place to get everything connected and set up to make
+      sure other assets are loaded and to provide data about the page to other
+      sites and platforms. It's the headquarters for starting out the page
+      right.
+    </p>
+  </body>
 </html>
