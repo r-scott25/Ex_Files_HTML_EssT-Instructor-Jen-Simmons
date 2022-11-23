@@ -9,6 +9,8 @@
   <body style="font-size: 20px">
     <h1 style="color: darkcyan">Media</h1>
 
+    <h1 style="color: darkcyan">Audio</h1>
+
     <h2>Audio Tag/Element: &lt;audio&gt;&lt;/audio&gt;</h2>
     <!-- <audio> -->
     <p>
@@ -24,7 +26,7 @@
     <p>The <b>autoplay attribute</b> will cause the audio to be played automatically as soon as the page loads, at least in some browsers. <br>
       Be careful with autoplay. Most people hate it when the audio starts playing automatically.</p> 
     <audio
-      controls loop autoplay src="birds.mp3" >
+      controls src="birds.mp3" loop autoplay>
     </audio>
 
     <p>Use the <b>source element</b> is used to specify more than one audio file. <br>
@@ -47,6 +49,48 @@
               type="audio/mpeg">
               Sorry, your browser doesn't support this audio file.
   </audio>
+
+  <h1 style="color: darkcyan">Video</h1>
+
+  <h2>Video Tag/Element: &lt;video&gt;&lt;/video&gt;</h2>
+
+  <p>Use the <b>source attribute</b> to point to a video file.</p>
+  <p>Use the <b>controls attribute</b> to create a video player.</p>
+
+  <video src="exampleVideo.mp4" controls></video>
+
+  <p><b>PROBLEM TO SOLVE: </b>For the simples version of this demo, I've made a video file that 480p compressed using the H.264 codec delivered <br>
+     as an MP4 file. 480p means that there are 480 lines of resolution or 720 pixels wide by 400 pixels tall. It's standard depth, not HD, not 4K. <br>
+     I'm using the H.264 coded because it has the widest support across browsers at the moment, much like choosing between PNG, JPEG, GIF, or SVG <br>
+     for images, there are a bunch of different codecs which a video file might be encoded. Video files contain A LOT OF DATA and can get incredibly <br>
+     big when they aren't compressed, far too big to travel across the internet. So, any internet video is using a pretty hefty mechanism for smashing<br>
+      all of that data into the smallest possible package.</p>
+      <p><b>There have been many attempts to make the Ultimate Codec:</b></p>
+      <ul>
+        <li>Real Video</li>
+        <li>Sorenson</li>
+        <li>Windoes Media</li>
+        <li>Flash (FLV)</li>
+        <li>H.263</li>
+      </ul>
+      <p>From about 2016-2020, the H.264 is the one that's dominated. It's the codec that most of us are using most of the time. <br>
+        But, it's not open source. It's patented. It's owned by a consortium that charges fees, and they are about to charge way more.</p>
+
+      <p>To fix this, a lot of effort has gone into creatig a truly open, not patented, but still awesome, video codec</p>
+      <p>Folks had hoped that <b>WebM</b> would emerge the winner, but it's still unclear if it will.</p>
+      <p>More recently, there's hope that we've solved this with <b>AV1</b>. It's looking like AV1 is a better codec that H.264, and is royalty free.</p>
+      <p>Multiple File Types: This works the same way as it does for the audio and picture elements. We use the source element to list the <br>
+        multiple file formats, with the source attribute to link to the file, and the type attribute to tell the browser which type of file it is. <br>
+        The browser will play the first file that it understands.</p>
+      <p><b>PROBLEM TO SOLVE: </b>There's nothing in HTML that will allow us to send different sizes of videos under different network conditions <br>
+        (resolution, screen size). In part, that's because we don't want the device to get oonly one moment to make a choice between, say, standard <br>
+        def and high def. We want it to make that choice over and over again. Maybe someone has an HD screen, but the network is kind of slow, so instead<br>
+         of sending them a 1080p file, we want to send them a 720 video, but then, as soon as their network speed improves, we want to switch from 720 <br>
+         to 1080. This is how Netflix, Hulu, HBO, YouTube, Vimeo, and all those TV apps work. They are constantly switching from one resolution to another<br>
+          as people watch, using a technique called <b>adaptive bitrate streaming</b>. It requires a server farm of transcoding robots, which is why <br>
+          <b>when you go to put video on a website, it's likely you might not use the video element. There's a good chance you'll use embed code from a <br>
+            video hosting service</b>.</p>
+
     
   </body>
 </html>
