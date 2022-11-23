@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="font-size: 20px">
+    <h1 style="color: darkcyan">Media</h1>
+
+    <h1 style="color: darkcyan">Audio</h1>
+
+    <h2>Audio Tag/Element: &lt;audio&gt;&lt;/audio&gt;</h2>
+    <!-- <audio> -->
+    <p>
+      The HTML can trigger the browser to create an entire audio player or
+      interface for us.
+    </p>
+    <p>
+      The audio element has both an opening and closing tag. It uses a source
+      attribute to provide the URL to the file
+    </p>
+    <p>The <b>controls attribute</b> provides the ability to play, pause, change the volume, see the time code, and jump around in the timeline.</p>
+    <p>The <b>loop attribute</b> will make the file loop. When it gets to the end, it starts playing from the beginning again.</p>
+    <p>The <b>autoplay attribute</b> will cause the audio to be played automatically as soon as the page loads, at least in some browsers. <br>
+      Be careful with autoplay. Most people hate it when the audio starts playing automatically.</p> 
+    <audio
+      controls src="birds.mp3" loop autoplay>
+    </audio>
+
+    <p>Use the <b>source element</b> is used to specify more than one audio file. <br>
+      Pehaps you want to use a new file format that's not supported in every browser while providing a fallback for the older browsers.<br>
+      Instead of putting the file link in a source attribute, put it in a source element:</p>
+      <audio controls loop autoplay>
+        <source src="birds.ogg"
+                type="audio/ogg codec=opus">
+        <source src="birs.mp3"
+                type="audio/mpeg">
+    </audio>
+    <p><b>MP3s</b> are supported in most modern browsers. <b>OGG</b> is another file format that had some advantages, but it never became very popular. A new file format may be coming out soon.</p>
+    <h3>Syntax for Supporting Multiple Media File Formats</h3>
+    <p>We can make multiple files and list them in separate source elements. The browser will use the first file that it understands in the list.<br>
+       You can also provide some fallback text that will only be displayed if the audio element is not understood by the browser at all. </p>
+    <audio controls loop autoplay>
+      <source src="birds.ogg"
+              type="audio/ogg codec=opus">
+      <source src="birs.mp3"
+              type="audio/mpeg">
+              Sorry, your browser doesn't support this audio file.
+  </audio>
+
+  <h1 style="color: darkcyan">Video</h1>
+
+  <h2>Video Tag/Element: &lt;video&gt;&lt;/video&gt;</h2>
+
+  <p>Use the <b>source attribute</b> to point to a video file.</p>
+  <p>Use the <b>controls attribute</b> to create a video player.</p>
+
+  <video src="exampleVideo.mp4" controls></video>
+
+  <p><b>PROBLEM TO SOLVE: </b>For the simples version of this demo, I've made a video file that 480p compressed using the H.264 codec delivered <br>
+     as an MP4 file. 480p means that there are 480 lines of resolution or 720 pixels wide by 400 pixels tall. It's standard depth, not HD, not 4K. <br>
+     I'm using the H.264 coded because it has the widest support across browsers at the moment, much like choosing between PNG, JPEG, GIF, or SVG <br>
+     for images, there are a bunch of different codecs which a video file might be encoded. Video files contain A LOT OF DATA and can get incredibly <br>
+     big when they aren't compressed, far too big to travel across the internet. So, any internet video is using a pretty hefty mechanism for smashing<br>
+      all of that data into the smallest possible package.</p>
+      <p><b>There have been many attempts to make the Ultimate Codec:</b></p>
+      <ul>
+        <li>Real Video</li>
+        <li>Sorenson</li>
+        <li>Windoes Media</li>
+        <li>Flash (FLV)</li>
+        <li>H.263</li>
+      </ul>
+      <p>From about 2016-2020, the H.264 is the one that's dominated. It's the codec that most of us are using most of the time. <br>
+        But, it's not open source. It's patented. It's owned by a consortium that charges fees, and they are about to charge way more.</p>
+
+      <p>To fix this, a lot of effort has gone into creatig a truly open, not patented, but still awesome, video codec</p>
+      <p>Folks had hoped that <b>WebM</b> would emerge the winner, but it's still unclear if it will.</p>
+      <p>More recently, there's hope that we've solved this with <b>AV1</b>. It's looking like AV1 is a better codec that H.264, and is royalty free.</p>
+      <p>Multiple File Types: This works the same way as it does for the audio and picture elements. We use the source element to list the <br>
+        multiple file formats, with the source attribute to link to the file, and the type attribute to tell the browser which type of file it is. <br>
+        The browser will play the first file that it understands.</p>
+      <p><b>PROBLEM TO SOLVE: </b>There's nothing in HTML that will allow us to send different sizes of videos under different network conditions <br>
+        (resolution, screen size). In part, that's because we don't want the device to get oonly one moment to make a choice between, say, standard <br>
+        def and high def. We want it to make that choice over and over again. Maybe someone has an HD screen, but the network is kind of slow, so instead<br>
+         of sending them a 1080p file, we want to send them a 720 video, but then, as soon as their network speed improves, we want to switch from 720 <br>
+         to 1080. This is how Netflix, Hulu, HBO, YouTube, Vimeo, and all those TV apps work. They are constantly switching from one resolution to another<br>
+          as people watch, using a technique called <b>adaptive bitrate streaming</b>. It requires a server farm of transcoding robots, which is why <br>
+          <b>when you go to put video on a website, it's likely you might not use the video element. There's a good chance you'll use embed code from a <br>
+            video hosting service</b>.</p>
+
+    
+
+    <h1 style="color: darkcyan">Captions and Subtitles</h1>
+    <p>Use captions and subtitles to make the video content more accessible to everyone, and in many places are required by law.</p>
+    <p>Do this by using the <b>track element</b>.</p>
+    <p>The video player will provide all the functionality so a viewer can turn captioning on and off or switch from one set of subtitles to another.</p>
+    <h3>webvtt = web video text tracks</h3>
+    <p>webvtt is basically a plain text file with a vtt extension that uses a certain convention for providing the information.</p>
+    <p>To get these captions to show up on our video we put the track element inside the video element. Just like the source elements, it's part of <br>
+      the list of options for the browser to use while rendering the video player. On the track element, we'll use the <b>source attribute</b> to point to <br>
+      the file itself. We'll use the <b>kind</b> attribute to tell the browser that this is captions. We'll add a <b>label</b> of english that will show up in <br>
+      the player as a label for this choice. We'll use a <b>srclang attribute</b> to specify which language this is. And we'll put a <b>default attribute</b> on <br>
+      this track element to specify that this track is the one we want to use by default when a user turns on captions.Now, I'll add a translation <br>
+      into Spanish and offer some options for subtitles. I've got another vtt file this time in Spanish. And we'll add another track element inside <br>
+      the same video element. This time, we'll set kind to subtitles.</p>
+    <video controls>
+      <source src="moonwalk.ogg"
+              type="audio/ogg codec=opus">
+      <source src="moonwalk.mp3"
+              type="audio/mpeg">
+      <track src="moonwalk.vtt" 
+              kind="captions"
+              label="English"
+              srclang="en"
+              default>
+              <track src="moonwalk.vtt" 
+              kind="subtitles"
+              label="Espanol"
+              srclang="es"
+              default>
+              <p>This would be a video of a moonwalk, if your device supported playing the video.</p>
+  </video>
+
+  <p>There are other options for the <b>kind attribute</b>.</p>
+  <p> We could create a vtt file that has descriptive information about what's happening <br>
+    visually in the video, and use <b>kind="descriptions"</b>.</p>
+    <p><b>Kind="chapters"</b> gives us a way to provide a text file that lists the chapters in the video, giving users a way to jump from one <br>
+      section in the video to another.</p>
+
+  <h1 style="color: darkcyan">Embedding other media through iframes</h1>
+  <p>For videos, it is likely that you'll use a video hosing service and embed the video player that they provide onto your webpage.</p>
+  <p><b>Embedding: </b>Taking content from one site and placing it into the middle of a page on another site.</p>
+  <p>There are lots of things you can embed. For example, a map from Google, a code demo from CodePen, a slide deck from Speaker Deck.</p>
+  <p>It's common to embed something complex from a service that takes care of all the hard parts for you.</p>
+  <h3>What HTML do we need to know to help us do this? </h3>
+  <p>
+    Well, basically, you get the HTML from the service that you are using. Let's use YouTube as an example. Here is a YouTube video that I made. <br>
+    And let's say I want to post it on my own website, so people can find it on my domain name and not have to go to the YouTube website. <br>
+    I'll look for a share button, or some other clue about where I can find the embed code. Here it is. Share. I see where it says Embed, and let me <br>
+    click that. And I see some options, Privacy Enhanced, that sounds good. I'll click Copy, and I'll get some code copied to my clipboard. <br>
+    I'll past this into my HTML, and voila, now I have a video embedded on the page. We don't really need to understand what all of this says. <br>
+    The engineers at YouTube wrote it all for us. Although, now that we know how to read HTML, we can see a lot here that we recognize. <br>
+    The <b>iframe element</b> has several attributes on it, including height and width. We could adjust those. Src is going to point to the source <br>
+    of the video file. Iframes are powerful. 
+  </p>
+    <h3>There are definitely some security considerations to be had about pulling in code from other sites like this.</h3>
+
+  <p>
+    So if you're using a CMS that someone else set up, like it's your job to post content on a WordPress website, or a Drupal website, there's a <br>
+    good chance that you can't just paste some random embed code from another website into your system. There's a good chance that the CMS is set up <br>
+    with a different way to allow a URL or a shortcode from a specifically white-labeled source. And you'll want to talk to someone who knows how to <br>
+    use your CMS to find out how to embed things like YouTube videos. If you're the person building a site, you probably want to think about how <br>
+    security will work when it comes to the iframe element. If a bunch of different people are going to be entering content into a system, you're <br>
+    not going to want to just allow all iframes. Think about the security. If it's just you, posting your own videos on your own website, then it <br>
+    will be fine.
+  </p>
+
+
+
+
+  </body>
+</html>
