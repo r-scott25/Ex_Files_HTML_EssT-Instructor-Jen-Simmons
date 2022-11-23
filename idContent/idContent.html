@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="font-size: 20px">
+  <h1 style="color: darkcyan">More Ways to Identify Content</h1>
+
+  <h1 style="color: darkcyan">Supporting Languages</h1>
+  <p>There are several tools in HTML we want to use to make sure it's clear which language our content is in. If we set up things properly, <br>
+    search engines will know when to list our sites in which language. The right dictionaries will show up for the spell checkers. When content is <br>
+    read aloud by a browser, it's more likely that the words will get pronounced properly. We want computers who are involved to know which language <br>
+    the content is in.</p>
+    <p>The <b>lang attribute</b> is what we use to do this.</p>
+    &lt;html lang="en-US"&gt;
+      ...
+      &lt;/html&gt;
+      <!-- <html lang="en-US">
+              ...
+      </html> -->
+  <p>If our whole page is the same, then it's simple. We can set the language on the outermost element that wraps all the other elements, <br>
+    which is the <b>html element</b>.</p>
+
+    <p><b>lang="en-US</b></p>
+    <p><b>lang="en-GB</b></p>
+    <p>This is especially important for spell-checkers. US = color Great Britain = colour</p>
+    <p>There are many options for the value of the lang attribute, not just to convey the language or the region-specific version of a language, <br>
+      but to also convey other qualities, like what kind of alphabet is being used to write a language.</p>
+
+      <h3>If your webpage has more than one language on it, specify the language for each particular part of the content. <br>
+          The lang attribute is a universal attribute, meaning you can put it on any element</h3>
+          <p>Also, specify in which direction our content flows using the <b>dir Attribute</b>.It's a universal attribute that can go on any element.<br>
+            If all of the content on your page is the same, define it once on the outer HTML element.</p>
+            <p><b>left to right: dir="ltr</b></p>
+            <p><b>right to left: dir="rtl</b></p>
+
+            <p>The <b>charset Attribute</b> defines the alphabet or set of characters for the script language.</p>
+            <p>Most projects use <b>Unicode, specifically UTF-8</b>, which basically means we encoded all our content into according to this <br>
+              giant UTF-8 specification. <b>Unicode</b> has over 137,000 characters in an attempt to support every language, all scripts, all <br>
+              form of communication, including Braille, sign writing, musical notation, and almost 3,000 emoji.</p>
+              <p><b>&lt;meta charset="UTF-8&gt;</b></p>
+              <p>Include this <b>meta element</b> on every page in our site, inside the <b>head element</b>.</p>
+
+<h1 style="color: darkcyan">Generic Elements: div and span</h1>
+
+<p><b>&lt;div&gt;</b></p>
+<p><b>&lt;span&gt;</b></p>
+<p><b>DON'T use these for everything. IT'S BAD. It hurts a lot of users.</b></p>
+<p>But, sometimes we need a generic element - a div or a span</p>
+<p>A <b>div</b> is a block level element.</p>
+<p>A <b>span</b> is an inline element.</p>
+<p>They both do the same thing: Nothing. Until you point CSS or JavaScript at them.</p>
+<p>div and span can take all the Global Attributes: class, id, lang, and aria roles.</p>
+<h2>Use Case for div and span:</h2>
+<p>We've got a simple article wrapped in an article element. There's a headline and four paragraphs. Perhaps we're writing the CSS for layout and <br>
+  we realize we need to put these paragraphs in a group together, so that we can put a background color behind just the paragraphs and not behind <br>
+  anything else. So let's add a div with a class of box. I wrote some CSS that targets this box class and you can see it kick in. Let's say we have <br>
+  some reason to target a phrase of content in the middle of the text. Some of this content is in Spanish and we want to make sure to change the <br>
+  lang attribute for it since it's the sentence in the middle of a paragraph let's use the inline element span to mark the phrase that we want to <br>
+  change.</p>
+
+  <h3>Only use div and span when there's not another element that will work - as a last resort.</h3>
+
+</body>
+</html>
