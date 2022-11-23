@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="font-size: 20px">
+    <h1 style="color: darkcyan">Media</h1>
+
+    <h2>Audio Tag/Element: &lt;audio&gt;&lt;/audio&gt;</h2>
+    <!-- <audio> -->
+    <p>
+      The HTML can trigger the browser to create an entire audio player or
+      interface for us.
+    </p>
+    <p>
+      The audio element has both an opening and closing tag. It uses a source
+      attribute to provide the URL to the file
+    </p>
+    <p>The <b>controls attribute</b> provides the ability to play, pause, change the volume, see the time code, and jump around in the timeline.</p>
+    <p>The <b>loop attribute</b> will make the file loop. When it gets to the end, it starts playing from the beginning again.</p>
+    <p>The <b>autoplay attribute</b> will cause the audio to be played automatically as soon as the page loads, at least in some browsers. <br>
+      Be careful with autoplay. Most people hate it when the audio starts playing automatically.</p> 
+    <audio
+      controls loop autoplay src="birds.mp3" >
+    </audio>
+
+    <p>Use the <b>source element</b> is used to specify more than one audio file. <br>
+      Pehaps you want to use a new file format that's not supported in every browser while providing a fallback for the older browsers.<br>
+      Instead of putting the file link in a source attribute, put it in a source element:</p>
+      <audio controls loop autoplay>
+        <source src="birds.ogg"
+                type="audio/ogg codec=opus">
+        <source src="birs.mp3"
+                type="audio/mpeg">
+    </audio>
+    <p><b>MP3s</b> are supported in most modern browsers. <b>OGG</b> is another file format that had some advantages, but it never became very popular. A new file format may be coming out soon.</p>
+    <h3>Syntax for Supporting Multiple Media File Formats</h3>
+    <p>We can make multiple files and list them in separate source elements. The browser will use the first file that it understands in the list.<br>
+       You can also provide some fallback text that will only be displayed if the audio element is not understood by the browser at all. </p>
+    <audio controls loop autoplay>
+      <source src="birds.ogg"
+              type="audio/ogg codec=opus">
+      <source src="birs.mp3"
+              type="audio/mpeg">
+              Sorry, your browser doesn't support this audio file.
+  </audio>
+    
+  </body>
+</html>
