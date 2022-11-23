@@ -55,8 +55,7 @@
     <h2 style="color:darkcyan">HTTPs</h2>
     <h3>Hypertext Transport Protocol Secure</h3>
     <p>In the beginning, all websites used HTTP. Today, experts agree that every website should be using HTTPS.</p>
-</body>
-</html>
+
 
 <h1 style="color:darkcyan">URL paths</h1>
 <h2>Relative URL</h2>
@@ -68,3 +67,33 @@
 <p>If we want link to a file called march-9.html inside a blog directory(folder), we type: blog/march-9.html</p>
 <p>To point a link to a file from one directory to another: ../images/logo.gif <br>
     The ../ means "go up a level."</p>
+
+    <h1 style="color:darkcyan">Navigation</h1>
+    <h2>Common Patterns for Creating a Menu or Navigation Bar</h2>
+    <h3>Example</h3>
+    <nav role="navigation" aria-label="main-menu"> 
+      <ul class="navbar">
+      <li><a href="/">Home</a></li>
+      <li><a href="/people">People</a></li>
+      <li><a href="/prices"></a>Prices</li>
+      <li><a href="/contact"></a>Contact</li>
+    </ul>
+  </nav>
+  <h3>Example: Breadcrumb List</h3>
+    <nav aria-label="breadcrumb"> 
+      <ol class="breadcrumbs">
+      <li><a href="/">Home</a></li>
+      <li><a href="/people">Blog</a></li>
+      <li><a href="/contact"></a>March</li>
+      <li>March 9th Update</li>
+    </ol>
+  </nav>
+  <h3>Example: Footer</h3>
+  <footer>
+    <a href="/about/privacy">Privacy Policy</a>
+    <a href="/about/legal">Terms of Service</a>
+  </footer>
+
+</body>
+</html>
+   
