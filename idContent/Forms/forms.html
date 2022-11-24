@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="font-size: 20px; font-family: sans-serif">
+    <h1 style="color: darkcyan">Forms and Interactive Elements</h1>
+    <h1 style="color: darkcyan">Forms</h1>
+    <p><b>form Element: </b>&lt;form&gt;&lt;/form&gt;</p>
+    <form action="success.html" method="get">
+      <label for="name">Name</label>
+      <input id="name" name="name" />
+      <label for="email">Email</label>
+      <input id="email" name="email" />
+
+      <button>Sign Up</button>
+    </form>
+
+    <h3>You can also wrap the input element with the label element:</h3>
+    <form action="success.html" method="get">
+      <label
+        >First Name
+        <input id="firstname" name="firstname" />
+      </label>
+      <label
+        >Last Name
+        <input id="lastname" name="lastname" />
+      </label>
+      <button>Submit</button>
+    </form>
+    <aside>
+      <h3>From W3 Schools regarding action and method:</h3>
+      <p>
+        <b>action Attribute: </b>specifies where to send form data when a form
+        is submitted
+      </p>
+      <p>
+        <b>method Attribute: </b>specifies how to send the form-data. The
+        form-data can be sent as URL variables <br />
+        (with method="get") or as HTTP post transaction (with method="post").
+        (Note: Never use GET to send sensitive data! (will be visible in the
+        URL)
+      </p>
+    </aside>
+    <p>
+      <b>name Attribute: </b>needed by the input element to report the data
+      that's been entered into the form
+    </p>
+
+    <h1 style="color: darkcyan">More On Forms</h1>
+    <p><b>type Attribute</b></p>
+    <form action="success.html" method="get">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" />
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <h1 style="color: darkcyan">Additional Form Element Types</h1>
+    <h1>Our Form</h1>
+    <form action="success.html" method="get">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Email"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" />
+
+      <label for="search">Search</label>
+      <input type="search" id="search" name="search" placeholder="&#128269;" />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone" />
+
+      <label for="textarea">Text Area</label>
+      <textarea id="textarea" name="textarea" cols="30" rows="15"></textarea>
+
+      <label for="date">Date</label>
+      <input type="date" id="date" name="date" />
+
+      <label for="color">Color</label>
+      <input type="color" id="color" name="color" />
+
+      <label for="file">File</label>
+      <input type="file" id="file" name="file" accept="image/*" multiple/>
+
+      <label for="checkbox">Checkbox</label>
+      <input type="checkbox" id="checkbox" name="simplecheckbox" value="The checkbox is checked" checked/>
+
+      <fieldset>
+        <legend>Checkboxes in a fieldset</legend>
+        <input type="checkbox" id="thischeck" name="checkboxlist" value="This" checked>
+        <Label for="thischeck">This</Label>
+        <input type="checkbox" id="orcheck" name="checkboxlist" value="And Or">
+        <Label for="orcheck">And/Or</Label>
+        <input type="checkbox" id="thatcheck" name="checkboxlist" value="That">
+        <Label for="thatcheck">That</Label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Radio Buttonsin a fieldset</legend>
+        <input type="radio" id="thisradio" name="radiobutton" value="This" checked>
+        <Label for="thisradio">This</Label>
+        <input type="radio" id="orradio" name="radiobutton" value="And Or">
+        <Label for="orradiok">And/Or</Label>
+        <input type="radio" id="thatradio" name="radiobutton" value="That">
+        <Label for="thatradio">That</Label>
+      </fieldset>
+
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>
