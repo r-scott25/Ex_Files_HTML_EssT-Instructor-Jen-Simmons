@@ -1,12 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <h1 style="color: darkcyan">Structuring Tabular Data</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="tabularData.css" />
+    <title>Document</title>
+  </head>
+  <body style="font-size: 20px; font-family: sans-serif">
+    <h1 style="color: darkcyan">Structuring Tabular Data</h1>
+    <h1 style="color: darkcyan">When to Use Tables</h1>
+    <p>
+      Use HTML tables for tabular data: information that's best conveyed in a
+      table
+    </p>
+    <p>
+      Ask yourself: Does using a table make it more clear what the content
+      means?
+    </p>
+    <h1 style="color: darkcyan">Builing Table Rows</h1>
+    <h3>Elements Used To Create a Table</h3>
+    <ul>
+      <li><b>table - </b>Wraps the whole table</li>
+      <li>
+        <b>tr - </b>Table Row - Wraps around a set of elements, defining them as
+        belonging to the same row. Attributes include colspan, rowspan, headers
+      </li>
+      <li>
+        <b>th - </b>Table Header - Defines a header for a column. Attributes
+        include colspan, rowspan, scope
+      </li>
+      <li><b>td - </b>Table Data - Marks up the cells of data</li>
+    </ul>
+
+    <table class="styled">
+      <tr>
+        <th>Bird</th>
+        <th>Color</th>
+        <th>Diet</th>
+        <th>Photo</th>
+      </tr>
+      <tr>
+        <td>American Goldfinch</td>
+        <td>yellow</td>
+        <td>Mostly seeds</td>
+        <td>
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/american-goldfinch.jpg"
+            alt="american-goldfinch"
+            width="360"
+            height="261"
+          />
+        </td>
+      </tr>
+      <tr>
+        <td>Bluejay</td>
+        <td>blue</td>
+        <td>Omnivorous</td>
+        <td>
+          <img
+            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/blue-jay.jpg"
+            alt=""
+            width="360"
+            height="529"
+          />
+        </td>
+      </tr>
+      <td>Indigo Bunting</td>
+      <td>blue</td>
+      <td>Mostly seeds and insects.</td>
+      <td><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/indigo-bunting.jpg" alt="" width="360" height="255" ></td>
+    </tr>
+    <tr>
+      <td>Northern Cardinal</td>
+      <td>red</td>
+      <td>Seeds, insects, berries.</td>
+      <td><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/northern-cardinal.jpg" alt="" width="360" height="240" ></td>
+    </tr>
+    <tr>
+      <td>Tufted Titmouse</td>
+      <td>grey</td>
+      <td>Mostly insects.</td>
+      <td><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/10558/tufted-titmouse.jpg" alt="" width="360" height="531" ></td>
+    </tr>
+    </table>
+
+  </body>
 </html>
